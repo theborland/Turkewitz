@@ -31,7 +31,7 @@ The following school abbreviations are expanded: ACR/CMDN, CBHS, DHS, EST, KMS, 
 
 ## Local development
 
-Requirements: Node.js 20 or newer and npm.
+Requirements: Node.js 26 LTS and npm. The deployment workflow also uses Node.js 26.
 
 ```sh
 npm ci
