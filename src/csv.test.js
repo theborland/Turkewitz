@@ -45,6 +45,7 @@ test('supports Pre-K eligibility in addition to ML Service decisions', () => {
   const [student] = prepareStudents(rows, 2026);
   assert.equal(student.preKindergarten, true);
   assert.equal(student.mlService, 'IELD');
+  assert.equal(student.school, 'Youth and Family Outreach');
   assert.equal(student.assessment.firstTest, 'PreIPT');
   assert.equal(student.assessment.firstScore, 'Overall: 1.0');
 });

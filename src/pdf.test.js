@@ -56,6 +56,7 @@ test('fills NO SCORE and Pre-K assessments and decisions', async () => {
   const preKFont = await preKPdf.embedFont(StandardFonts.Helvetica);
   const preKForm = preKPdf.getForm();
   fillStudentForm(preKForm, preK, preKFont);
+  assert.equal(preKForm.getTextField('Text2').getText(), 'Youth and Family Outreach');
   assert.equal(preKForm.getTextField('Text14').getText(), 'PreIPT');
   assert.equal(preKForm.getTextField('Score').getText(), 'Overall: 1.0');
   assert.equal(preKForm.getCheckBox('Check Box4').isChecked(), true);

@@ -27,7 +27,7 @@ export const SCHOOL_NAMES = Object.freeze({
   PRS: 'Presumpscot Elementary School',
   RCH: 'Howard C. Reiche Community School',
   TAL: 'Gerald E. Talbot Community School',
-  YFO: 'Youth Building/YMCA',
+  YFO: 'Youth and Family Outreach',
   'SPP ACR': 'Specialized Program - Amanda C. Rowe Elementary School',
   'SPP LGF': 'Specialized Program - Longfellow Elementary School',
   'SPP PRS': 'Specialized Program - Presumpscot Elementary School',
