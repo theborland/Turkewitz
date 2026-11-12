@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Create initial eligibility letters from a CSV in your browser."
+    />
+    <title>Initial Eligibility Letter Generator</title>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="page-header">
+        <p class="eyebrow">Portland Public Schools</p>
+        <h1>Initial Eligibility Letter Generator</h1>
+        <p class="intro">
+          Select an intake CSV to create one completed two-page letter per
+          student, combined into a single PDF.
+        </p>
+      </header>
+
+      <section class="panel" aria-labelledby="upload-heading">
+        <h2 id="upload-heading">Create letters</h2>
+        <label class="file-picker" for="csv-file">
+          <span class="file-picker-title">Choose an intake CSV</span>
+          <span class="file-picker-hint">CSV files only</span>
+          <input id="csv-file" type="file" accept=".csv,text/csv" />
+        </label>
+
+        <div class="form-row">
+          <label for="intake-year">Year for intake dates</label>
+          <input
+            id="intake-year"
+            name="intake-year"
+            type="number"
+            inputmode="numeric"
+            min="2000"
+            max="2100"
+            required
+          />
+          <p class="field-hint">
+            Used when the CSV appointment date does not include a year.
+          </p>
+        </div>
+
+        <p id="file-summary" class="file-summary" aria-live="polite">
+          No CSV selected.
+        </p>
+        <button id="generate-button" class="primary-button" type="button" disabled>
+          Create and download PDF
+        </button>
+        <p id="status" class="status" role="status" aria-live="polite">
+          Choose a CSV to get started.
+        </p>
+        <progress id="progress" class="progress" max="100" value="0" hidden>
+          0%
+        </progress>
+      </section>
+
+      <aside class="privacy-note">
+        <h2>Your files stay on this device</h2>
+        <p>
+          The CSV is read in your browser. The form template is part of this
+          website. Student data and generated letters are not uploaded or saved
+          by the app; the finished PDF is downloaded to your device.
+        </p>
+      </aside>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
